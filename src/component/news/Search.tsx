@@ -15,8 +15,8 @@ const Search = ({ onChange, setHistory }: Iprops) => {
     setIsFocus(true);
   };
 
-  const onHandleBlur = (e:any) => {
-    e.preventDefault()
+  const onHandleBlur = (e: any) => {
+    e.preventDefault();
     setIsFocus(false);
   };
 
@@ -25,23 +25,26 @@ const Search = ({ onChange, setHistory }: Iprops) => {
     console.log("섭밋!");
   };
   return (
-    <FlexDivBox>
-      <form onSubmit={onSubmit}>
-        <InputSearchDiv>
-          <InputSearch
-            onChange={onChange}
-            onFocus={onHandleFocus}
-            onBlur={onHandleBlur}
-          />
-        </InputSearchDiv>
-        {/* <button type="submit">검색</button> */}
-      </form>
+    <>
+      <FlexDivBox>
+        <form onSubmit={onSubmit}>
+          <InputSearchDiv>
+            <InputSearch
+              onChange={onChange}
+              onFocus={onHandleFocus}
+              onBlur={onHandleBlur}
+            />
+          </InputSearchDiv>
+          {/* <button type="submit">검색</button> */}
+        </form>
+      </FlexDivBox>
       {focus ? <Histroy setHistory={setHistory} /> : ""}
-    </FlexDivBox>
+    </>
   );
 };
 
 const FlexDivBox = styled.div`
+  position: relative;
   display: flex;
   justify-content: center;
 `;
