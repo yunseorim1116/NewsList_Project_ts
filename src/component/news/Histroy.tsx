@@ -1,11 +1,13 @@
 import React from "react";
 
+import styled from "styled-components";
 const Histroy = ({ setHistory }: any) => {
   let getHistory: Array<any> = JSON.parse(
     localStorage.getItem("keywords") || "[]"
   ); //질문하기
 
   const onRemoveClick = (id: any) => {
+    console.log("여기로들어옴?");
     const hitory = getHistory.filter((history) => history.id !== id);
     setHistory(hitory);
     localStorage.setItem("keywords", JSON.stringify(hitory)); //셋 해줍니다 !
@@ -16,16 +18,16 @@ const Histroy = ({ setHistory }: any) => {
         {getHistory.map((el) => {
           return (
             <>
-              <div key={el.id}>
+              <FlexDivBox key={el.id}>
                 <div>{el.text}</div>
-                <div
-                  onClick={() => {
+                <Ximog
+                  onMouseDown={() => {
                     onRemoveClick(el.id);
                   }}
                 >
                   x
-                </div>
-              </div>
+                </Ximog>
+              </FlexDivBox>
             </>
           );
         })}
@@ -34,4 +36,13 @@ const Histroy = ({ setHistory }: any) => {
   );
 };
 
+const Ximog = styled.div`
+  margin-left: 2px;
+  cursor: pointer;
+`;
+
+const FlexDivBox = styled.div`
+  display: flex;
+  justify-content: center;
+`;
 export default Histroy;

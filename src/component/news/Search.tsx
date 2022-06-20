@@ -15,7 +15,8 @@ const Search = ({ onChange, setHistory }: Iprops) => {
     setIsFocus(true);
   };
 
-  const onHandleBlur = () => {
+  const onHandleBlur = (e:any) => {
+    e.preventDefault()
     setIsFocus(false);
   };
 
