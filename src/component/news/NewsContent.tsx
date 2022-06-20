@@ -42,7 +42,7 @@ const NewsContent = ({ news }: { news: InewsSearch }) => {
       <div>headline : {news.headline.main}</div>
       <div>absrtact : {news.abstract}</div>
       <div>{news.byline.original}</div>
-      {/* <NewsPicture news={news} /> */}
+      {/* <NewsPicture news={news} /> */} <TopMarginDiv />
       <Alink href={`${news.web_url}`}>기사 전문 보기</Alink>
       <br />
       <br />
@@ -50,6 +50,10 @@ const NewsContent = ({ news }: { news: InewsSearch }) => {
     </Li>
   );
 };
+
+const TopMarginDiv = styled.div`
+  margin-top: 10px;
+`;
 
 const Icon = styled.div`
   font-size: 18px;

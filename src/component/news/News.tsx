@@ -9,11 +9,16 @@ const News = () => {
       <HeaderDiv>The New York Times</HeaderDiv>
       <br />
 
-      <GetContentData />
+      <Margin>
+        <GetContentData />
+      </Margin>
     </div>
   );
 };
-
+const Margin = styled.div`
+  margin-right: 50px;
+  margin-left: 50px;
+`;
 const HeaderDiv = styled.div`
   text-align: center;
   font-size: 28px;
