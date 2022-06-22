@@ -1,16 +1,18 @@
 import React from "react";
 
 import styled from "styled-components";
-const Histroy = ({ setHistory }: any) => {
+
+const Histroy = ({ setHistory, inputRef }: any) => {
+  console.log(inputRef.current);
   let getHistory: Array<any> = JSON.parse(
     localStorage.getItem("keywords") || "[]"
   ); //질문하기
 
   const onRemoveClick = (id: any) => {
-    console.log("여기로들어옴?");
     const hitory = getHistory.filter((history) => history.id !== id);
     setHistory(hitory);
     localStorage.setItem("keywords", JSON.stringify(hitory)); //셋 해줍니다 !
+    inputRef.current.focus();
   };
   return (
     <MarginDiv>
@@ -21,7 +23,8 @@ const Histroy = ({ setHistory }: any) => {
               <FlexDivBox key={el.id}>
                 <div>{el.text}</div>
                 <Ximog
-                  onMouseDown={() => {
+                  onMouseDown={(e) => {
+                    e.preventDefault();
                     onRemoveClick(el.id);
                   }}
                 >

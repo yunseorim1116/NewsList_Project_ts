@@ -10,6 +10,7 @@ interface Iprops {
 
 const Search = ({ onChange, setHistory }: Iprops) => {
   const [focus, setIsFocus] = useState(false);
+  const inputRef = useRef<any>("");
 
   const onHandleFocus = () => {
     setIsFocus(true);
@@ -30,6 +31,7 @@ const Search = ({ onChange, setHistory }: Iprops) => {
         <form onSubmit={onSubmit}>
           <InputSearchDiv>
             <InputSearch
+              ref={inputRef}
               onChange={onChange}
               onFocus={onHandleFocus}
               onBlur={onHandleBlur}
@@ -38,7 +40,7 @@ const Search = ({ onChange, setHistory }: Iprops) => {
           {/* <button type="submit">검색</button> */}
         </form>
       </FlexDivBox>
-      {focus ? <Histroy setHistory={setHistory} /> : ""}
+      {focus ? <Histroy setHistory={setHistory} inputRef={inputRef} /> : ""}
     </>
   );
 };
