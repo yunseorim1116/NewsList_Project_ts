@@ -7,8 +7,6 @@ interface IProps {
   inputRef: { current: HTMLInputElement | null };
 }
 const Histroy = ({ setHistory, inputRef }: IProps) => {
-  console.log(setHistory);
-  console.log(inputRef);
   let getHistory: Array<any> = JSON.parse(
     localStorage.getItem("keywords") || "[]"
   ); //질문하기
