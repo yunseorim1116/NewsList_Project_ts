@@ -2,17 +2,22 @@ import React from "react";
 
 import styled from "styled-components";
 
-const Histroy = ({ setHistory, inputRef }: any) => {
-  console.log(inputRef.current);
+interface IProps {
+  setHistory: React.Dispatch<any>;
+  inputRef: { current: HTMLInputElement | null };
+}
+const Histroy = ({ setHistory, inputRef }: IProps) => {
+  console.log(setHistory);
+  console.log(inputRef);
   let getHistory: Array<any> = JSON.parse(
     localStorage.getItem("keywords") || "[]"
   ); //질문하기
 
-  const onRemoveClick = (id: any) => {
+  const onRemoveClick = (id: number) => {
     const hitory = getHistory.filter((history) => history.id !== id);
     setHistory(hitory);
     localStorage.setItem("keywords", JSON.stringify(hitory)); //셋 해줍니다 !
-    inputRef.current.focus();
+    inputRef.current?.focus();
   };
   return (
     <MarginDiv>

@@ -1,9 +1,8 @@
 import React, { useState, useEffect, MouseEventHandler, useRef } from "react";
 import axios from "axios";
-import { Idocs, InewsSearch, IAllData } from "../../type/type";
+import { InewsSearch, IAllData } from "../../type/type";
 
 import NewsContent from "./NewsList";
-import { Navigate, useNavigate } from "react-router-dom";
 import Search from "./Search";
 import { useSelector } from "react-redux";
 

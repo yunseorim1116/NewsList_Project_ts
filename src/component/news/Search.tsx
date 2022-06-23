@@ -10,13 +10,13 @@ interface Iprops {
 
 const Search = ({ onChange, setHistory }: Iprops) => {
   const [focus, setIsFocus] = useState(false);
-  const inputRef = useRef<any>("");
+  const inputRef = useRef<HTMLInputElement>(null);
 
   const onHandleFocus = () => {
     setIsFocus(true);
   };
 
-  const onHandleBlur = (e: any) => {
+  const onHandleBlur = (e: React.FocusEvent<HTMLInputElement>) => {
     e.preventDefault();
     setIsFocus(false);
   };
