@@ -5,6 +5,7 @@ import { InewsSearch, IAllData } from "../../type/type";
 import NewsContent from "./NewsList";
 import Search from "./Search";
 import { useSelector } from "react-redux";
+import Lodaing from "../../Lodaing";
 
 const GetContentData = () => {
   const state: any = useSelector((state) => state);
@@ -151,9 +152,7 @@ const GetContentData = () => {
     <>
       <Search onChange={onChange} setHistory={setHistory} />
 
-      <ul>
-        {isLoading && news ? <NewsContent news={news} /> : <div>로딩중..</div>}
-      </ul>
+      <ul>{isLoading && news ? <NewsContent news={news} /> : <Lodaing />}</ul>
     </>
   );
 };

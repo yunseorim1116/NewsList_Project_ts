@@ -1,8 +1,13 @@
 import React from "react";
+import TestComponent from "../public/img/TestComponent";
 
+import { Background, LoadingText } from "./Style";
 
-const Lodaing = () => {
-  return <div>로딩중입니다.....</div>;
+export default () => {
+  return (
+    <Background>
+      <img src="img/animation.gif" alt="로딩중" width="5%" />
+          
+    </Background>
+  );
 };
-
-export default Lodaing;
