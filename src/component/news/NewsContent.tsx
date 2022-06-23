@@ -21,7 +21,6 @@ const NewsContent = ({ news }: { news: InewsSearch }) => {
   };
 
   const test = new Date(news.pub_date);
-  console.log(test.toLocaleString());
 
   return (
     <Li>

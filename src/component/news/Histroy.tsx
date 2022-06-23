@@ -69,8 +69,8 @@ const FlexDivBox = styled.div`
   opacity: 0.8;
   border-radius: 8px;
 
-  margin-left: 25px;
-  margin-right: 25px;
+  margin-left: 1.5vw;
+  margin-right: 1.5vw;
 
   top: 20px;
   display: flex;
