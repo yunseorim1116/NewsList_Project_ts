@@ -1,8 +1,7 @@
 import React from "react";
 
 import { InewsSearch } from "../../type/type";
-import { useState } from "react";
-import { useEffect } from "react";
+
 import { useDispatch, useSelector } from "react-redux";
 import { clipNews, unclipNews } from "../reducer/userClipSlice";
 

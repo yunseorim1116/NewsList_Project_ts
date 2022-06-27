@@ -6,9 +6,10 @@ import NewsContent from "./NewsList";
 import Search from "./Search";
 import { useSelector } from "react-redux";
 import Lodaing from "../../Lodaing";
+import { RootState } from "../..";
 
 const ContentDatas = () => {
-  const state: any = useSelector((state) => state);
+  const state = useSelector((state: RootState) => state);
   const ClipId = state.userClipSlice.NewsClipid;
 
   const [page, setPage] = useState(1);
