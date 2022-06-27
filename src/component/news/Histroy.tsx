@@ -59,16 +59,17 @@ const MarginDiv = styled.div`
   color: black;
 
   position: absolute;
-  top:9.2500vw;
+  top: 9.25vw;
   right: 47.9583vw;
 `;
 
 const FlexDivBox = styled.div`
-  background-color: #d3d3d3;
+  background-color: #cacaca;
   box-shadow: 0 1px 6px 0 rgb(32 33 36 / 28%);
   opacity: 0.8;
   border-radius: 8px;
 
+  padding: 4px;
   margin-left: 25px;
   margin-right: 25px;
 

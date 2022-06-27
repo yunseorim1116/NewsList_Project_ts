@@ -39,18 +39,27 @@ const NewsContent = ({ news }: { news: InewsSearch }) => {
           />
         </Icon>
       )}
-      {/* <img src={`${news.url}`} /> */}
-      <TopMarginDiv />
-      <ContentDiv>
-        <br />
-        <TitleDiV> {news.headline.main}</TitleDiV>
-        <br />
-        <ArticleDiv>
-          <div>{news.abstract}</div>
-          <div>{news.byline.original}</div>
-          {/* <NewsPicture news={news} /> */}{" "}
-        </ArticleDiv>
-      </ContentDiv>
+
+      <FlexBoxDiv>
+        <div>
+          <img
+            src={`https://www.nytimes.com/${news.multimedia[0]?.url}`}
+            width={450}
+            height={350}
+          />
+        </div>
+
+        <ContentDiv>
+          <br />
+          <TitleDiV> {news.headline.main}</TitleDiV>
+          <br />
+          <ArticleDiv>
+            <div>{news.abstract}</div>
+            <div>{news.byline.original}</div>
+            {/* <NewsPicture news={news} /> */}{" "}
+          </ArticleDiv>
+        </ContentDiv>
+      </FlexBoxDiv>
       <TopMarginDiv />
 
       <div>{test.toLocaleString()}</div>
@@ -63,21 +72,27 @@ const NewsContent = ({ news }: { news: InewsSearch }) => {
   );
 };
 
+const FlexBoxDiv = styled.div`
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-around;
+`;
+
 const ContentDiv = styled.div`
   box-shadow: 0 1px 6px 0 rgb(32 33 36 / 28%);
   background-color: #f1f1f1;
-  border-radius: 7px;
+
   padding: 50px;
 `;
 
 const ArticleDiv = styled.div`
-  font-family: "ShadowsIntoLight";
+  font-family: "Unna";
 `;
 
 const TitleDiV = styled.div`
   font-size: 35px;
   color: #000000;
-  font-family: "TheNautigal";
+  font-family: "Unna";
 `;
 
 const TopMarginDiv = styled.div`
