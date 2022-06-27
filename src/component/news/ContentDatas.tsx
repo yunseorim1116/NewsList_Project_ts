@@ -7,7 +7,7 @@ import Search from "./Search";
 import { useSelector } from "react-redux";
 import Lodaing from "../../Lodaing";
 
-const GetContentData = () => {
+const ContentDatas = () => {
   const state: any = useSelector((state) => state);
   const ClipId = state.userClipSlice.NewsClipid;
 
@@ -41,8 +41,6 @@ const GetContentData = () => {
   };
 
   const getNews = async () => {
-    console.log("겟뉴스 함수 실행");
-    console.log(page); //얘도 잘 찍힘
 
     try {
       setIsUserSearchIng(true);
@@ -68,21 +66,19 @@ const GetContentData = () => {
   };
 
   const handleScroll = () => {
-    //무한 스크롤 이벤트
     const scrollHeight = document.documentElement.scrollHeight;
     const scrollTop = document.documentElement.scrollTop;
     const clientHeight = document.documentElement.clientHeight;
 
     if (scrollTop + clientHeight >= scrollHeight) {
-      console.log("계속 여기로 들어오나요");
-      //끝에 닿았을때
+
 
       if (throttle.current) return; //트루면 넘어가고
       if (!throttle.current) {
         //기본 시작은 false..무조건 함수로 들어온다. 무조건 무조건 무조건
         throttle.current = true; //일단 트루로 바꿔주고 셋함수 시작
         setTimeout(() => {
-          console.log("끝에닿았다");
+  
           setPage((prev) => prev + 1); //state + 1 해주자,실행
           throttle.current = false;
         }, 500);
@@ -91,7 +87,6 @@ const GetContentData = () => {
   };
 
   const handleAddHistory = (text: string | number) => {
-    console.log("여기로 들어왔다");
 
     const newKeyWord = {
       //데이터 텍스트 만들어주기
@@ -124,7 +119,6 @@ const GetContentData = () => {
 
   //무한스크롤용 페이지
   useEffect(() => {
-    // console.log("page ? ", page); //페이지 바꼈으니까 잘찍히고
     getNews(); //함수 실행
   }, [page]); //페이지가 바뀔때마다 뉴스를 불러온다.
 
@@ -157,4 +151,4 @@ const GetContentData = () => {
   );
 };
 
-export default GetContentData;
+export default ContentDatas;

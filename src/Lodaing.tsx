@@ -1,7 +1,7 @@
 import React from "react";
 import TestComponent from "../public/img/TestComponent";
 
-import { Background, LoadingText } from "./Style";
+import { Background } from "./Style";
 
 export default () => {
   return (

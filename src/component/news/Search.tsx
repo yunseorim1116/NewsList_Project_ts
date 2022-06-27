@@ -23,7 +23,7 @@ const Search = ({ onChange, setHistory }: Iprops) => {
 
   const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    console.log("섭밋!");
+
   };
   return (
     <>
@@ -37,7 +37,7 @@ const Search = ({ onChange, setHistory }: Iprops) => {
               onBlur={onHandleBlur}
             />
           </InputSearchDiv>
-          {/* <button type="submit">검색</button> */}
+  
         </form>
       </FlexDivBox>
       {focus ? <Histroy setHistory={setHistory} inputRef={inputRef} /> : ""}

@@ -1,5 +1,5 @@
 import React from "react";
-import GetContentData from "./GetContentData";
+import GetContentData from "./ContentDatas";
 
 import styled from "styled-components";
 // https://api.nytimes.com/svc/archive/v1/2019/1.json?api-key=yourkey
