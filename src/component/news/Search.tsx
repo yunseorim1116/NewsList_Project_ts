@@ -46,12 +46,13 @@ const FlexDivBox = styled.div`
   justify-content: center;
 `;
 const InputSearchDiv = styled.div`
+  margin-bottom: 50px;
   background: none;
   border: none;
   border-radius: 4px;
   box-shadow: 0 1px 6px 0 rgb(32 33 36 / 28%);
 
-  max-width: 560px;
+  max-width: 1800px;
   outline: none;
 `;
 const InputSearch = styled.input`
@@ -60,7 +61,7 @@ const InputSearch = styled.input`
   outline: none;
   height: 1.9792vw;
   padding: 0 1.5625vw 0.1042vw;
-  width: 100%;
+  width: 600px;
 `;
 
 export default Search;

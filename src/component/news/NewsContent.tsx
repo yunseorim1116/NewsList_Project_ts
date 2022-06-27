@@ -39,12 +39,22 @@ const NewsContent = ({ news }: { news: InewsSearch }) => {
           />
         </Icon>
       )}
-      <div>{test.toLocaleString()}</div>
       {/* <img src={`${news.url}`} /> */}
-      <div>headline : {news.headline.main}</div>
-      <div>absrtact : {news.abstract}</div>
-      <div>{news.byline.original}</div>
-      {/* <NewsPicture news={news} /> */} <TopMarginDiv />
+      <TopMarginDiv />
+      <ContentDiv>
+        <br />
+        <TitleDiV> {news.headline.main}</TitleDiV>
+        <br />
+        <ArticleDiv>
+          <div>{news.abstract}</div>
+          <div>{news.byline.original}</div>
+          {/* <NewsPicture news={news} /> */}{" "}
+        </ArticleDiv>
+      </ContentDiv>
+      <TopMarginDiv />
+
+      <div>{test.toLocaleString()}</div>
+      <br />
       <Alink href={`${news.web_url}`}>기사 전문 보기</Alink>
       <br />
       <br />
@@ -52,6 +62,23 @@ const NewsContent = ({ news }: { news: InewsSearch }) => {
     </Li>
   );
 };
+
+const ContentDiv = styled.div`
+  box-shadow: 0 1px 6px 0 rgb(32 33 36 / 28%);
+  background-color: #f1f1f1;
+  border-radius: 7px;
+  padding: 50px;
+`;
+
+const ArticleDiv = styled.div`
+  font-family: "ShadowsIntoLight";
+`;
+
+const TitleDiV = styled.div`
+  font-size: 35px;
+  color: #000000;
+  font-family: "TheNautigal";
+`;
 
 const TopMarginDiv = styled.div`
   margin-top: 10px;
