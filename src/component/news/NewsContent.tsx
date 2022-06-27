@@ -15,7 +15,6 @@ import styled from "styled-components";
 
 const NewsContent = ({ news }: { news: InewsSearch }) => {
   const dispatch = useDispatch();
-  const [clip, setClip] = useState<Boolean>(false);
   let body = {
     ...news,
   };
@@ -76,17 +75,5 @@ const Li = styled.li`
   border-bottom: 1px solid #bcbcbc;
   margin-bottom: 30px;
 `;
-const ClipButton = styled.button`
-  border: 700;
-  font-weight: 700;
-  color: white;
-  cursor: pointer;
-  border: 0;
-  outline: 0;
-  background-color: #585858;
-  border-radius: 4px;
-  padding: 5px;
-  box-shadow: 0 1px 6px 0 rgb(32 33 36 / 28%);
-  margin-bottom: 5px;
-`;
+
 export default NewsContent;

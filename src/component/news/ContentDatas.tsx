@@ -14,7 +14,6 @@ const ContentDatas = () => {
   const [page, setPage] = useState(1);
   const throttle = useRef(false);
 
-  const [isUserSearchIng, setIsUserSearchIng] = useState(false);
   const [isLoading, setIsLoading] = useState<boolean>(false);
 
   const [news, setNews] = useState<InewsSearch[]>([]);
@@ -41,9 +40,7 @@ const ContentDatas = () => {
   };
 
   const getNews = async () => {
-
     try {
-      setIsUserSearchIng(true);
       let response: IAllData;
 
       userSearch //검색어가 있으면 검색어를 보여주고,없으면 전체를 보여줘.
@@ -55,11 +52,10 @@ const ContentDatas = () => {
           ));
 
       checkClipNews(response.data.response.docs);
+      console.log(response.data.response.docs);
 
       setIsLoading(true);
-      setIsUserSearchIng(false);
     } catch (e) {
-      console.log(e);
       setIsLoading(true);
       // Navigate("/err");
     }
@@ -71,14 +67,11 @@ const ContentDatas = () => {
     const clientHeight = document.documentElement.clientHeight;
 
     if (scrollTop + clientHeight >= scrollHeight) {
-
-
       if (throttle.current) return; //트루면 넘어가고
       if (!throttle.current) {
         //기본 시작은 false..무조건 함수로 들어온다. 무조건 무조건 무조건
         throttle.current = true; //일단 트루로 바꿔주고 셋함수 시작
         setTimeout(() => {
-  
           setPage((prev) => prev + 1); //state + 1 해주자,실행
           throttle.current = false;
         }, 500);
@@ -87,7 +80,6 @@ const ContentDatas = () => {
   };
 
   const handleAddHistory = (text: string | number) => {
-
     const newKeyWord = {
       //데이터 텍스트 만들어주기
       id: Date.now(),

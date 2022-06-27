@@ -5,18 +5,17 @@ export const userClipSlice = createSlice({
   name: "userClip",
   initialState: {
     content: [
-      //객체뿌려주기
+
       {
         id: "",
         title: "",
         name: "",
         date: "",
         content: "",
-        // clip: false,
         url: "",
       },
     ],
-    NewsClipid: [], //있나없나비교하기
+    NewsClipid: [], 
   },
   reducers: {
     clipNews: (state: any, action: any): any => {

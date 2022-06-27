@@ -44,7 +44,7 @@ const Histroy = ({ setHistory, inputRef }: IProps) => {
 };
 
 const TopMarginDiv = styled.div`
-  margin-bottom: 5px;
+  margin-bottom: 8px;
 `;
 
 const Ximog = styled.div`
@@ -59,8 +59,8 @@ const MarginDiv = styled.div`
   color: black;
 
   position: absolute;
-  top: 6.2500vw;
-  right: 48.9583vw;
+  top: 7.2500vw;
+  right: 47.9583vw;
 `;
 
 const FlexDivBox = styled.div`

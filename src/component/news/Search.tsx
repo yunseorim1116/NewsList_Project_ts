@@ -21,14 +21,10 @@ const Search = ({ onChange, setHistory }: Iprops) => {
     setIsFocus(false);
   };
 
-  const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-
-  };
   return (
     <>
       <FlexDivBox>
-        <form onSubmit={onSubmit}>
+        <form>
           <InputSearchDiv>
             <InputSearch
               ref={inputRef}
@@ -37,7 +33,6 @@ const Search = ({ onChange, setHistory }: Iprops) => {
               onBlur={onHandleBlur}
             />
           </InputSearchDiv>
-  
         </form>
       </FlexDivBox>
       {focus ? <Histroy setHistory={setHistory} inputRef={inputRef} /> : ""}
@@ -51,9 +46,9 @@ const FlexDivBox = styled.div`
   justify-content: center;
 `;
 const InputSearchDiv = styled.div`
-  background: #fff;
+  background: none;
   border: none;
-  border-radius: 22px;
+  border-radius: 4px;
   box-shadow: 0 1px 6px 0 rgb(32 33 36 / 28%);
 
   max-width: 560px;
@@ -62,9 +57,9 @@ const InputSearchDiv = styled.div`
 const InputSearch = styled.input`
   background: none;
   border: none;
-  height: 44px;
   outline: none;
-  padding: 0 40px 2px;
+  height: 1.9792vw;
+  padding: 0 1.5625vw 0.1042vw;
   width: 100%;
 `;
 
