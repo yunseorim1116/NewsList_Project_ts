@@ -32,8 +32,7 @@ export const userClipSlice = createSlice({
   reducers: {
     clipNews: (state: IStateType, action: PayloadAction<Iclips>) => {
       console.log("클립뉴스 함수로 들어왔다");
-      console.log(state);
-      console.log(action.payload);
+
       state.content.push({ ...action.payload });
       state.NewsClipid.push(action.payload._id);
     },

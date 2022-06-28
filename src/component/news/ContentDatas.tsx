@@ -12,6 +12,8 @@ const ContentDatas = () => {
   const state = useSelector((state: RootState) => state);
   const ClipId = state.userClipSlice.NewsClipid;
 
+  console.log(ClipId);
+
   const [page, setPage] = useState(1);
   const throttle = useRef(false);
 
@@ -37,7 +39,9 @@ const ContentDatas = () => {
       })
     );
 
-    setNews((prev) => [...prev, ...firstFecthData]);
+    if (scrollCal()) {
+      setNews((prev) => [...prev, ...firstFecthData]);
+    }
   };
 
   const getNews = async () => {
@@ -62,12 +66,17 @@ const ContentDatas = () => {
     }
   };
 
-  const handleScroll = () => {
+  const scrollCal = () => {
     const scrollHeight = document.documentElement.scrollHeight;
     const scrollTop = document.documentElement.scrollTop;
     const clientHeight = document.documentElement.clientHeight;
 
-    if (scrollTop + clientHeight >= scrollHeight) {
+    return scrollTop + clientHeight >= scrollHeight;
+  };
+
+  const handleScroll = () => {
+    if (scrollCal()) {
+      console.log("들어오냐..");
       if (throttle.current) return; //트루면 넘어가고
       if (!throttle.current) {
         //기본 시작은 false..무조건 함수로 들어온다. 무조건 무조건 무조건
