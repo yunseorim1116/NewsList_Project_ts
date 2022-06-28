@@ -31,13 +31,13 @@ const PositionDiV = styled.div``;
 const ClipListBoxdiv = styled.div`
   cursor: pointer;
   position: absolute;
-  top: 28px;
+  top: 40px;
   right: 15px;
-  font-family: "TheNautigal";
+  font-family: "Unna";
 `;
 
 const ClipList = styled.div`
-  box-shadow: 0 1px 6px 0 rgb(32 33 36 / 28%);
+
   background-color: #5f5f5f;
   color: white;
   border-radius: 4px;
@@ -54,11 +54,10 @@ const Margin = styled.div`
 `;
 const HeaderDiv = styled.div`
   padding: 30px;
-  font-family: "TheNautigal";
-  background: linear-gradient(to left, #202020, #303030);
-  color: white;
+  color: #464646;
   text-align: center;
-  font-size: 28px;
+  font-size: 70px;
+  font-family: "Unna";
 `;
 
 export default News;

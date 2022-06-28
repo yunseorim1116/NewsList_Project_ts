@@ -52,7 +52,7 @@ const InputSearchDiv = styled.div`
   border-radius: 4px;
   box-shadow: 0 1px 6px 0 rgb(32 33 36 / 28%);
 
-  max-width: 1800px;
+  max-width: 1400px;
   outline: none;
 `;
 const InputSearch = styled.input`
@@ -61,7 +61,7 @@ const InputSearch = styled.input`
   outline: none;
   height: 1.9792vw;
   padding: 0 1.5625vw 0.1042vw;
-  width: 600px;
+  width: 300px;
 `;
 
 export default Search;

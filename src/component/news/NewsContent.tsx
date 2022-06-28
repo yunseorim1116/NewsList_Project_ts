@@ -25,6 +25,7 @@ const NewsContent = ({ news }: { news: InewsSearch }) => {
       {news.clip ? (
         <Icon>
           <AiTwotoneStar
+            size="24"
             onClick={() => {
               dispatch(unclipNews(body));
             }}
@@ -33,6 +34,7 @@ const NewsContent = ({ news }: { news: InewsSearch }) => {
       ) : (
         <Icon>
           <AiOutlineStar
+            size="24"
             onClick={() => {
               dispatch(clipNews(body));
             }}
@@ -79,8 +81,9 @@ const FlexBoxDiv = styled.div`
 `;
 
 const ContentDiv = styled.div`
-  box-shadow: 0 1px 6px 0 rgb(32 33 36 / 28%);
-  background-color: #f1f1f1;
+  /* box-shadow: 0 1px 6px 0 rgb(32 33 36 / 28%); */
+  background-color: #ffffff;
+  margin-left: 20px;
 
   padding: 50px;
 `;
@@ -90,6 +93,7 @@ const ArticleDiv = styled.div`
 `;
 
 const TitleDiV = styled.div`
+  border-bottom: 1px solid #7c7c7c;
   font-size: 35px;
   color: #000000;
   font-family: "Unna";
@@ -106,6 +110,8 @@ const Icon = styled.div`
 `;
 
 const Alink = styled.a`
+  font-family: "Unna";
+
   margin-top: 50px;
   text-decoration: none;
   color: #7c7c7c;
