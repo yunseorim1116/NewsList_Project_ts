@@ -44,11 +44,11 @@ const Histroy = ({ setHistory, inputRef }: IProps) => {
 };
 
 const TopMarginDiv = styled.div`
-  margin-bottom: 8px;
+   margin-bottom: 0.52vw;
 `;
 
 const Ximog = styled.div`
-  margin-left: 3px;
+  margin-left: 0.19vw;
   cursor: pointer;
 `;
 
@@ -59,21 +59,21 @@ const MarginDiv = styled.div`
   color: black;
 
   position: absolute;
-  top: 9.25vw;
+  top: 10.25vw;
   right: 47.9583vw;
 `;
 
 const FlexDivBox = styled.div`
-  background-color: #cacaca;
+  background-color: #ffffff;
   box-shadow: 0 1px 6px 0 rgb(32 33 36 / 28%);
   opacity: 0.8;
-  border-radius: 8px;
+  border-radius: 4px;
 
-  padding: 4px;
-  margin-left: 25px;
-  margin-right: 25px;
+  padding: 0.26vw;
+  margin-left: 1.62vw;
+  margin-right: 1.62vw;
 
-  top: 100px;
+  top: 6.49vw;
   display: flex;
   justify-content: center;
   margin: auto;

@@ -41,6 +41,8 @@ const ContentDatas = () => {
 
     if (scrollCal()) {
       setNews((prev) => [...prev, ...firstFecthData]);
+    }else{
+      setNews([...firstFecthData]);
     }
   };
 
