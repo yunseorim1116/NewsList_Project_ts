@@ -1,5 +1,5 @@
 # New York Times Project
-
+<img src ="https://user-images.githubusercontent.com/94429667/176232409-e4b51a1b-351b-4136-bd73-eed58861aece.gif"/>
 
 ## 사용 기술 및 라이브러리
 React / TypeScript / Redux-tk / Pesist 
