@@ -25,7 +25,7 @@ const NewsContent = ({ news }: { news: InewsSearch }) => {
       {news.clip ? (
         <Icon>
           <AiTwotoneStar
-            size="24"
+            size="30"
             onClick={() => {
               dispatch(unclipNews(body));
             }}
@@ -34,7 +34,7 @@ const NewsContent = ({ news }: { news: InewsSearch }) => {
       ) : (
         <Icon>
           <AiOutlineStar
-            size="24"
+            size="30"
             onClick={() => {
               dispatch(clipNews(body));
             }}
